@@ -6,6 +6,6 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://dutchento.github.io",
+  site: "https://www.dutchento.org",
   integrations: [tailwind(), mdx(), sitemap(), icon()],
 });
