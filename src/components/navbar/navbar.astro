@@ -3,39 +3,36 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Image } from 'astro:assets';
+import logoImage from "@assets/dutchento_logo.avif"
 
 const menuitems = [
   {
-    title: "Features",
+    title: "Social",
     path: "#",
     children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
+      { title: "YouTube", path: "https://www.youtube.com/channel/UC7d2pGmq8U7apnh39hHEMUA" },
+      { title: "Instagram", path: "https://www.instagram.com/dutchento/" },
+      // { title: "Dropdown Submenu", path: "#" },
+      // { title: "404 Page", path: "/404" },
     ],
   },
   {
-    title: "Pricing",
-    path: "/pricing",
+    title: "Podcast",
+    path: "/podcast",
   },
   {
-    title: "About",
+    title: "Over Dutchento",
     path: "/about",
   },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-  {
-    title: "Pro Version",
-    badge: true,
-    path: "https://astroship-pro.web3templates.com/",
-  },
+  // {
+  //   title: "Blog",
+  //   path: "/blog",
+  // },
+  // {
+  //   title: "Contact",
+  //   path: "/contact",
+  // },
 ];
 ---
 
@@ -43,11 +40,12 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
+        <a href="/"><img src={logoImage.src} alt="Dutchento logo" width="200" /></a>
+        <!-- <a href="/" class="text-lg"
+          ><span class="font-bold text-slate-800">Dutch</span><span
+            class="text-slate-500">ento</span
           >
-        </a>
+        </a> -->
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
         </div>
@@ -57,13 +55,13 @@ const menuitems = [
           {
             menuitems.map((item, index) => (
               <>
-                {item.children && (
+                {/* {item.children && (
                   <Dropdown
                     title={item.title}
                     children={item.children}
                     lastItem={index === menuitems.length - 1}
                   />
-                )}
+                )} */}
 
                 {!item.children && (
                   <li>
@@ -83,17 +81,17 @@ const menuitems = [
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3 gap-4">
+        <!-- <div class="lg:hidden flex items-center mt-3 gap-4">
           <Link href="#" style="muted" block size="md">Log in</Link>
           <Link href="#" size="md" block>Sign up</Link>
-        </div>
+        </div> -->
       </MenuItems>
     </Astronav>
-    <div>
+    <!-- <div>
       <div class="hidden lg:flex items-center gap-4">
         <a href="#">Log in</a>
         <Link href="#" size="md">Sign up</Link>
       </div>
-    </div>
+    </div> -->
   </header>
 </Container>

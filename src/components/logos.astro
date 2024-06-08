@@ -1,18 +1,30 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import buckaroo from "@assets/partners/buckaroo.png"
+import vendic from "@assets/partners/vendic.avif"
+import hipex from "@assets/partners/hipex.avif"
+import proudnerds from "@assets/partners/proud-nerds.avif"
+import reachdigital from "@assets/partners/reach-digital.avif"
+
 ---
 
 <div class="mt-24">
-  <h2 class="text-center text-slate-500">Works with your technologies</h2>
+  <h2 class="text-center text-slate-500">Dutchento Partners</h2>
   <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+    <a href="https://www.buckaroo.nl/resources/integratie/magento-2?utm_source=dutchento&utm_medium=link&utm_campaign=Dutchento_Profile" target="_blank"><img src={buckaroo.src} alt="Buckaroo" width="150" /></a>
+    <a href="https://www.hipex.io/en/magento-hosting/?utm_source=dutchento&utm_medium=link&utm_campaign=Dutchento_Profile" target="_blank"><img src={hipex.src} alt="Hipex" width="150" /></a>
+    <a href="https://www.proudnerds.com/?utm_source=dutchento&utm_medium=link&utm_campaign=Dutchento_Profile" target="_blank"><img src={proudnerds.src} alt="Proud Nerds" width="150" /></a>
+    <a href="https://vendic.nl/?utm_source=dutchento&utm_medium=link&utm_campaign=Dutchento_Profile" target="_blank"><img src={vendic.src} alt="Vendic" width="150" /></a>
+    <a href="https://www.reachdigital.nl/magento-webshop?utm_source=dutchento&utm_medium=link&utm_campaign=Dutchento_Profile" target="_blank"><img src={reachdigital.src} alt="Reach Digital" width="150" /></a>
 
-    <Icon class="size-8 md:size-12" name="simple-icons:react" />
+
+    <!-- <Icon class="size-8 md:size-12" name="simple-icons:magento" />
     <Icon class="size-8 md:size-12" name="simple-icons:svelte" />
     <Icon class="size-8 md:size-12" name="simple-icons:astro" />
     <Icon class="size-8 md:size-16" name="simple-icons:tailwindcss" />
-    <Icon class="size-8 md:size-16" name="simple-icons:alpinedotjs" />
-    <Icon class="size-8 md:size-12" name="simple-icons:vercel" />
+    <Icon class="size-8 md:size-12" name="simple-icons:github" /> -->
 
   </div>
 </div>
