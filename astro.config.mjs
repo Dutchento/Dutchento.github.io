@@ -3,9 +3,13 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
+import react from '@astrojs/react'
+import markdoc from '@astrojs/markdoc'
+import keystatic from '@keystatic/astro'
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.dutchento.org",
-  integrations: [tailwind(), mdx(), sitemap(), icon()],
+  integrations: [tailwind(), mdx(), sitemap(), icon(),react(), markdoc(), keystatic()],
+  output: 'hybrid',
 });
