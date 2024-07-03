@@ -23,6 +23,7 @@
     "@iconify-json/uil": "^1.1.8",
     "@keystatic/astro": "^5.0.0",
     "@keystatic/core": "^0.5.19",
+    "@playform/compress": "^0.0.13",
     "@tailwindcss/typography": "^0.5.13",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
